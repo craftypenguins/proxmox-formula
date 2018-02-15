@@ -1,0 +1,9 @@
+{# vi: set ft=jinja: #}
+{%- set interface = salt['grains.get']('proxmox:interface', default=config.interface) -%}
+{%- set hostname = salt['grains.get']('host') -%}
+{%- set fqdn = salt['grains.get']('fqdn') -%}
+{%- set ip = salt['grains.get']('ip4_interfaces')[interface] -%}
+{%- if ip[0] -%}
+{{ip[0]}} {{fqdn}} {{hostname}} pvelocalhost
+{%- endif -%}
+

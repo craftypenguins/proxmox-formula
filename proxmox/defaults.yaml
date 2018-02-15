@@ -1,0 +1,6 @@
+# vi: set ft=yaml: #
+
+proxmox:
+  lookup:
+    interface: 'vmbr0'
+  config: []
