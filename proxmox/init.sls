@@ -1,7 +1,7 @@
 {# vi: set ft=jinja: #}
 {% from "proxmox/map.jinja" import proxmox with context %}
 
-{%- if grains["oscodename"]|lower == 'jessie' %}
+{%- if grains["oscodename"]|lower == 'stretch' %}
 include:
   - proxmox.repository
   - proxmox.hosts
